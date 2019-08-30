@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Don't Drive Drowsy</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/icon"> 
+    <link rel="icon" href="favicon.ico" type="image/icon">
+  </head>
+  <body onload="main()">
+<!--     Detection Canvas -->
+    <canvas id="canvas" class="canvas" width="200" height="100"></canvas>
+<!-- Alarm audio -->
+    <audio src="assets/sounds/alarm.wav" id="alarm" preload="auto"></audio>
+    <div id="message">
+      Don't drive drowsy!
+    </div>
+    <div id="sub-message">
+      I will alarm you if you close your eyes for more than half sec.
+    </div>
+    <footer>
+       <div>
+      <a href="https://ko-fi.com/dinodroid">
+          <img src="https://ko-fi.com/img/Kofi_Logo_Blue.svg" height="30"
+      /></a>
+    </div>
+    <div>
+      Made with <i style="color:red">&#9829;</i> by dinodroid using
+      <a href="https://jeeliz.com/">
+        <img
+          src="https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png"
+          height="22"
+      /></a>
+    </div>
+    </footer>
+    
+<!--     Add script files -->
+    <script src="assets/js/jeelizFaceTransfer.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
