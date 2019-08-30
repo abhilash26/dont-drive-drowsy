@@ -1,0 +1,34 @@
+/* Styles */
+
+html, body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  background: #fff;
+  min-height: 100vh;
+  min-width: 100vw;
+} 
+
+#message{
+  font-family: "helvatica", sans-serif;
+  font-size: 3rem;
+  text-align:center;
+}
+
+
+#sub-message{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+footer div:nth-of-type(1){
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+footer div:nth-of-type(2){
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
