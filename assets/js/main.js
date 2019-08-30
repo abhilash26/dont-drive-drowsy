@@ -5,9 +5,8 @@
 let eyesClosedThreshold = 0.65; // For 65% open eyes.
 let timeThreshold = 500; // For 0.5 seconds;
 
-
-
-let lastClosedTime, continuous = false;
+let lastClosedTime,
+  continuous = false;
 let alarm = document.getElementById("alarm");
 let body = document.querySelector("body");
 
@@ -33,6 +32,7 @@ function main() {
 
 function successCallback() {
   // Call next frame
+  document.getElementById("full-page-loader").style.display = "none";
   nextFrame();
   // Add code after API is ready.
 }
@@ -45,11 +45,11 @@ function errorCallback(errorCode) {
 function nextFrame() {
   let deltaTime = Date.now() - lastClosedTime;
   if (deltaTime > timeThreshold && continuous) {
-    alarm.play();
+    start_alarm();
     // console.log("Alarm Called");
     body.style.background = "#f00";
   } else {
-    alarm.pause();
+    stop_alarm();
     body.style.background = "#fff";
   }
 
@@ -58,7 +58,7 @@ function nextFrame() {
     let expressions = JEEFACETRANSFERAPI.get_morphTargetInfluences();
     //**************************************************************************** */
     if (
-      expressions[8] >= eyesClosedThreshold &&  // For left and right eye
+      expressions[8] >= eyesClosedThreshold && // For left and right eye
       expressions[9] >= eyesClosedThreshold
     ) {
       if (lastClosedTime === undefined || !continuous)
@@ -78,6 +78,3 @@ function nextFrame() {
   // Replay frame
   requestAnimationFrame(nextFrame);
 }
-
-
-
