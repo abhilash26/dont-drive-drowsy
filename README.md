@@ -11,7 +11,7 @@ It has face detection as well as eye closing detection which is perfect for this
 
 ## Application and use
 
-We are humans, we get tired and sleepy. There is one most important time that needs our undivided attention is the time when we are driving.
+We are humans, we get tired and sleepy. There is one most important time that needs our undivided attention which is the time when we are driving.
 This application will detect if you are sleepy/drowsey and play an alarm sound to wake you up, simply and effectively.
 
 ## Configuration
